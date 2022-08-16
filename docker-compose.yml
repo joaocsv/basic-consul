@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+  consulserver01:
+    container_name: consulserver01
+    image: consul:1.13.1
+    command: ["tail", "-f", "/dev/null"]
+  
+  consulserver02:
+    container_name: consulserver02
+    image: consul:1.13.1
+    command: ["tail", "-f", "/dev/null"]
+  
+  consulserver03:
+    container_name: consulserver03
+    image: consul:1.13.1
+    command: ["tail", "-f", "/dev/null"]
+
+  consulclient01:
+    container_name: consulclient01
+    image: consul:1.13.1
+    command: ["tail", "-f", "/dev/null"]
+    volumes:
+      - ./clients/client-01/:/etc/consul.d
