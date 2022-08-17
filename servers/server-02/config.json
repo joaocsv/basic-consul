@@ -1,0 +1,11 @@
+{
+  "node_name": "consulserver02",
+  "server": true,
+  "bind_addr": "172.18.0.2",
+  "data_dir": "/var/lib/consul",
+  "bootstrap_expect": 3,
+  "retry_join": [
+    "172.18.0.3",
+    "172.18.0.5"
+  ]
+}

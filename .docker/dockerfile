@@ -1,0 +1,6 @@
+FROM consul:1.13.1
+
+RUN mkdir /var/lib/consul && \
+    mkdir /etc/consul.d
+
+ENTRYPOINT [ "consul", "agent", "-config-dir=/etc/consul.d" ]
